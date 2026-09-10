@@ -1,0 +1,4 @@
+.DS_Store
+
+# Private keys and local credentials
+*.key
