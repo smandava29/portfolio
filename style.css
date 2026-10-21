@@ -76,20 +76,21 @@ h2 { margin-bottom: 0; font: 700 clamp(41px,5.3vw,78px)/1.02 var(--sans); letter
 .skill-tile ul { position: absolute; left: 33px; right: 33px; bottom: 26px; margin: 0; padding: 13px 0 0; border-top: 1px solid var(--line); list-style: none; display: flex; flex-wrap: wrap; gap: 7px 16px; font: 10px var(--mono); color: #cfccc5; }
 .skill-tile li:before { content: "·"; color: var(--accent); margin-right: 5px; }
 
-.product-lens { border: 1px solid var(--line); background: var(--ink); }
-.lens-controls { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--line); }
-.lens-control { min-height: 80px; padding: 20px 25px; border: 0; border-right: 1px solid var(--line); background: transparent; color: var(--muted); font: 500 12px var(--mono); letter-spacing: .04em; text-align: left; text-transform: uppercase; cursor: pointer; transition: background .2s, color .2s; }
-.lens-control:last-child { border-right: 0; }
-.lens-control span { display: block; margin-bottom: 9px; color: var(--signal); font-size: 10px; }
-.lens-control:hover, .lens-control[aria-selected="true"] { background: var(--panel); color: var(--paper); }
-.lens-control[aria-selected="true"] { box-shadow: inset 0 -2px var(--signal); }
-.lens-panel { min-height: 290px; padding: clamp(30px,4vw,55px); }
-.lens-panel[hidden] { display: none; }
-.lens-kicker { margin-bottom: 19px; color: var(--signal-bright); font: 10px var(--mono); letter-spacing: .08em; text-transform: uppercase; }
-.lens-panel h3 { max-width: 680px; margin-bottom: 16px; font-size: clamp(25px,3.2vw,42px); line-height: 1.05; letter-spacing: -.055em; }
-.lens-panel > p:not(.lens-kicker) { max-width: 700px; margin-bottom: 30px; color: #c0beba; font-size: 15px; line-height: 1.7; }
-.lens-panel ul { display: flex; flex-wrap: wrap; gap: 8px 25px; margin: 0; padding: 15px 0 0; border-top: 1px solid var(--line); color: var(--muted); font: 10px var(--mono); list-style: none; text-transform: uppercase; }
-.lens-panel li:before { content: "·"; margin-right: 7px; color: var(--signal); }
+.how-i-work { border-bottom: 1px solid var(--line); }
+.workflow-tabs { border: 1px solid var(--line); background: var(--ink); }
+.workflow-controls { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--line); }
+.workflow-control { min-height: 80px; padding: 20px 25px; border: 0; border-right: 1px solid var(--line); background: transparent; color: var(--muted); cursor: pointer; font: 500 12px var(--mono); letter-spacing: .04em; text-align: left; text-transform: uppercase; }
+.workflow-control:last-child { border-right: 0; }
+.workflow-control span { display: block; margin-bottom: 9px; color: var(--signal); font-size: 10px; }
+.workflow-control:hover, .workflow-control[aria-selected="true"] { background: var(--panel); color: var(--paper); }
+.workflow-control[aria-selected="true"] { box-shadow: inset 0 -2px var(--signal); }
+.workflow-panel { min-height: 290px; padding: clamp(30px,4vw,55px); }
+.workflow-panel[hidden] { display: none; }
+.workflow-kicker { margin-bottom: 19px; color: var(--signal-bright); font: 10px var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+.workflow-panel h3 { max-width: 680px; margin-bottom: 16px; font-size: clamp(25px,3.2vw,42px); line-height: 1.05; letter-spacing: -.055em; }
+.workflow-panel > p:not(.workflow-kicker) { max-width: 700px; margin-bottom: 30px; color: #c0beba; font-size: 15px; line-height: 1.7; }
+.workflow-panel ul { display: flex; flex-wrap: wrap; gap: 8px 25px; margin: 0; padding: 15px 0 0; border-top: 1px solid var(--line); color: var(--muted); font: 10px var(--mono); list-style: none; text-transform: uppercase; }
+.workflow-panel li:before { content: "·"; margin-right: 7px; color: var(--signal); }
 
 .journey { border-bottom: 1px solid var(--line); }
 .journey-layout { display: grid; grid-template-columns: 1.45fr .8fr; gap: 11%; }
@@ -106,11 +107,11 @@ h2 { margin-bottom: 0; font: 700 clamp(41px,5.3vw,78px)/1.02 var(--sans); letter
 .role-entry ul { max-width: 670px; margin: 0; padding-left: 17px; color: var(--muted); font-size: 13px; line-height: 1.62; }
 .role-entry li + li { margin-top: 8px; }
 .role-entry li::marker { color: var(--signal); }
-.experience-detail summary { display: flex; align-items: center; justify-content: space-between; max-width: 670px; padding: 13px 0; border-top: 1px solid var(--line); color: var(--paper); cursor: pointer; font: 10px var(--mono); letter-spacing: .05em; text-transform: uppercase; list-style: none; }
-.experience-detail summary::-webkit-details-marker { display: none; }
-.experience-detail summary span { color: var(--signal); font-size: 17px; transition: transform .2s var(--ease); }
-.experience-detail[open] summary span { transform: rotate(45deg); }
-.experience-detail ul { padding-top: 3px; }
+.experience-toggle { width: 100%; max-width: 670px; min-height: 44px; display: flex; align-items: center; justify-content: space-between; padding: 13px 0; border: 0; border-top: 1px solid var(--line); background: none; color: var(--paper); cursor: pointer; font: 10px var(--mono); letter-spacing: .05em; text-align: left; text-transform: uppercase; }
+.experience-toggle span { color: var(--signal); font-size: 17px; transition: transform .2s var(--ease); }
+.experience-detail.is-open .experience-toggle span { transform: rotate(45deg); }
+.experience-copy[hidden] { display: none; }
+.experience-copy ul { padding-top: 3px; }
 .education h3 { font-size: 18px; letter-spacing: -.04em; margin: 7px 0; }
 .education article p { max-width: 450px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
 .education article { min-height: 200px; border-top: 1px solid var(--line); padding: 25px 0; }
@@ -146,6 +147,10 @@ footer a:hover, .footer-top:hover { color: var(--signal-bright); }
 .reveal.visible { opacity: 1; transform: none; }
 .delay-1 { transition-delay: .1s; }.delay-2 { transition-delay: .2s; }
 
+@media (max-width: 1100px) {
+  .availability { display: none; } nav { justify-content: flex-end; gap: 15px; }
+}
+
 @media (max-width: 900px) {
   .site-header { padding: 0 6vw; }.availability { display: none; } nav { justify-content: flex-end; gap: 15px; }
   .hero, .section, .work-with-me { padding-left: 6vw; padding-right: 6vw; }.skills { padding-left: 6vw; padding-right: 6vw; }
@@ -160,12 +165,12 @@ footer a:hover, .footer-top:hover { color: var(--signal-bright); }
   .hero { min-height: 680px; padding-top: 145px; }.hero h1 { font-size: 15vw; }.hero-bottom { align-items: flex-start; flex-direction: column; }
   .hero-lines { width: 60vw; right: -22vw; }.about-meta { flex-wrap: wrap; justify-content: flex-start; gap: 13px 28px; }
   .skill-grid { grid-template-columns: 1fr; }.skill-tile { min-height: 275px; }
-  .lens-controls { grid-template-columns: 1fr; }.lens-control { min-height: 62px; padding: 15px 20px; border-right: 0; border-bottom: 1px solid var(--line); }.lens-control:last-child { border-bottom: 0; }.lens-control span { display: inline; margin: 0 10px 0 0; }
-  .lens-panel { min-height: 0; padding: 30px 20px; }.lens-panel ul { display: block; padding-top: 9px; line-height: 2; }
+  .workflow-controls { grid-template-columns: 1fr; }.workflow-control { min-height: 62px; padding: 15px 20px; border-right: 0; border-bottom: 1px solid var(--line); }.workflow-control:last-child { border-bottom: 0; }.workflow-control span { display: inline; margin: 0 10px 0 0; }
+  .workflow-panel { min-height: 0; padding: 30px 20px; }.workflow-panel ul { display: block; padding-top: 9px; line-height: 2; }
   .section-heading { margin-bottom: 43px; }.company-heading { align-items: flex-start; flex-direction: column; gap: 6px; }
   .project-row { padding: 25px 0; grid-template-columns: 27px 1fr 23px; }.project-row h3 { font-size: 20px; }.project-row p { font-size: 12px; }
   .work-with-me { min-height: 530px; }.work-mark { font-size: 240px; right: -58px; bottom: -35px; }
   footer { align-items: flex-start; flex-direction: column; } footer div { gap: 18px; }
 }
 
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; }.reveal { opacity: 1; transform: none; transition: none; }.lens-control, .experience-detail summary span { transition: none; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; }.reveal { opacity: 1; transform: none; transition: none; }.experience-toggle span { transition: none; } }
