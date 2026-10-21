@@ -2,3 +2,6 @@
 
 # Private keys and local credentials
 *.key
+
+# Local source material; the site is static and does not serve these files.
+*.docx

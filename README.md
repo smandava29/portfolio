@@ -2,11 +2,12 @@
 
 A dependency-free static website that is ready for GitHub Pages.
 
-## Customize
+## Preview
 
-- Replace `S. Mandava` and `hello@example.com` in `index.html`.
-- Update the three project cards and your social links.
-- Open `index.html` in a browser to preview.
+Open `index.html` in a browser. The site is dependency-free; `style.css` and
+`script.js` provide its styling and interactions.
+
+Local résumé files are intentionally ignored and are not served by the site.
 
 ## Publish on GitHub Pages
 
